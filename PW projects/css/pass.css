@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  width: 100%;
+  background: #b69002;
+}
+
+.nav-bar {
+  margin: 0 4rem;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-bar .logo a{
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 800;
+}
+.nav-bar .logo a span{
+  font-size: 1.5rem;
+  background-color: #000;
+  color: #b69002;
+  font-weight: 800;
+  padding: 0.1rem;
+  border-radius: 5px;
+}
+
+.nav-bar .nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+.nav-bar .nav ul li  {
+  list-style: none;
+}
+
+.nav-bar .nav ul li a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #f9f7f0;
+  transition: 0.3s ease;
+}
+
+.nav-bar .nav ul li a:hover {
+  color: #000;
+}
+
+.toggle-btn{
+  font-size: 1rem;
+  border: 1px solid #f9f7f0;
+  padding: 12px 20px;
+  border-radius: 5px;
+  color: #f4f4f4;
+}
+
+.toggle-btn, .closeMenu{
+  display: none;
+}
+
+
+
+/*media qreue for 1024px laptop screen*/
+@media only screen and ( max-width:1024px) {
+  html{
+      font-size: 60%;
+  }
+}
+
+/*media qreue for tablet screen*/
+@media only screen and ( max-width:1024px) {
+  .toggle-btn{
+      display: inline-block;
+  }
+
+  .nav ul li a {
+      font-size: 1rem;
+  }
+  
+  .nav-bar .nav {
+      position: absolute;
+      width: 100%;
+      height: 0;
+      z-index: 1;
+      background: #b69002;
+      top: 30px;
+      left: 0;
+      margin-top: 2rem;
+      text-align: center;
+      transition: 0.2s;
+      overflow: hidden;
+  }
+
+  .nav-bar .nav ul {
+      flex-direction: column;
+      gap: 5px;
+      text-align: center;
+      transition: 0.5s;
+      opacity: 0;
+  }
+
+  .nav-bar .nav.active ul {
+      opacity: 3 ;
+  }
+
+  .nav-bar .nav.active{
+      height: 450px;
+  }
+
+  .nav ul li{
+      margin: 2rem 0;
+  }
+  
+  .nav-bar .nav ul li a {
+      font-size: 0.9rem;
+  }
+
+  .input-box span{
+    line-height: 30px;
+  }
+
+}
+
+
+
+/*PASSWORD GENERATOR CSS*/
+.container{
+  margin: 0 4rem;
+  border-radius: 8px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+.container h2{
+  font-weight: 600;
+  font-size: 2rem;
+  padding: 1rem 1.75rem;
+  text-align: center;
+}
+.input-box{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+}
+.input-box{
+  width: 800px;
+  max-width: 100%;
+}
+.input-box input{
+  width: 100%;
+  height: 40px;
+  padding: 0 20px;
+  border: 1px solid #ccc;
+  outline: none;
+  color: black;
+  background: transparent;
+  text-align: center;
+  border-radius: 5px 0 0 5px;
+}
+::placeholder{
+  font-size: 15px;
+}
+.input-box span{
+  cursor: pointer;
+  font-size: 1rem;
+  height: 40px;
+  color: #707070;
+  border: 1px solid #ccc;
+  border-radius: 0 5px 5px 0;
+  padding: 0.5rem;
+}
+.input-box span:hover{
+  color: #b69002!important;
+
+}
+ .pass-indicator{
+  width: 100%;
+  height: 4px;
+  position: relative;
+  background: #dfdfdf;
+  margin-top: 0.75rem;
+  border-radius: 25px;
+}
+.pass-indicator::before{
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 50%;
+  border-radius: inherit;
+  transition: width 0.3s ease;
+}
+.pass-indicator#weak::before{
+  width: 20%;
+  background: #e71b1b;
+}
+.pass-indicator#medium::before{
+  width: 50%;
+  background: #ffd000;
+}
+.pass-indicator#strong::before{
+  width: 100%;
+  background: rgb(14, 224, 14);
+}
+.pass-length{
+  margin: 1.56rem 0 1.25rem;
+}
+.pass-length .details{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.pass-length input {
+  width: 100%;
+  height: 5px;
+  color: #b69002;
+}
+.pass-settings .options{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.pass-settings .options .option{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  width: calc(100% / 2);
+}
+.options .option:first-child{
+  pointer-events: none;
+}
+.options .option:first-child input{
+  opacity: 0.7;
+}
+.options .option input{
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+}
+.options .option label{
+  cursor: pointer;
+  color: black;
+  padding-left: 0.63rem;
+}
+.generate-btn{
+  width: 100%;
+  color: #fff;
+  cursor: pointer;
+  background: #b69002;
+  font-size: 1rem;
+  padding: 1rem 0;
+  border-radius: 5px;
+  text-transform: uppercase;
+  border-radius: 50px;
+  font-family: sans-serif;
+  margin-bottom: 1rem;
+}
+.strength{
+  margin-top: 0;
+  text-align: center;
+}
+.generate-btn:hover{
+  background-color: white;
+  border: 1px solid #b69002;
+  color: #b69002;
+  font-size: 1rem;
+  font-family: sans-serif;
+}
+
+.pos-cen{
+  margin: 1rem 4rem;
+  background-color: #ebebe0;
+  padding: 2rem;
+  border-radius: 8px;
+}
+.head3{
+  font-size: 1.3rem;
+ text-align: center;
+ margin-bottom: 1rem;
+}
+.para3{
+  text-align: justify;
+  letter-spacing: 0.2px;
+  margin-bottom: 0.5rem;
+}
+.list-para li{
+  margin-bottom: 1rem;
+}
+.section2{
+  background-color: #ebebe0;
+}
+.titles{
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  padding-top: 15px;
+}
+.questions-container{
+  max-width: 100%;
+  margin: 0 4rem;
+}
+
+.question{
+  border-bottom: 1px solid #b69002;
+}
+.question:last-child{
+  border-bottom: none;
+}
+.question button{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border:none;
+  outline: none;
+  font-size: 1.2rem;
+  color: #000;
+  font-weight: 200;
+  cursor: pointer;
+}
+.question button:hover{
+  color: #b69002;
+}
+.question p{
+  width: 100%;
+  font-size: 1rem;
+  max-height: 0;
+  opacity: 0;
+  line-height: 1.5;
+  overflow: hidden;
+  transition: all 0.6s ease;
+}
+.d-arrow{
+  transition: transform 0.5s ease-in ;
+  color: black;
+}
+.d-arrow:hover{
+  color: #b69002;
+}
+/*add this class when click*/
+.question p.show{
+  max-height: 200px; 
+  opacity: 1;
+  padding:0px 15px 30px 15px;
+}
+.question button .d-arrow.rotate{
+  transform: rotate(180deg);
+}
+footer {
+  width: 100%;
+  background-color: #b69002;
+  color: white;
+}
+.footer ul{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+  padding: 1rem;
+  text-align: center;
+ }
+ .footer ul li a{
+  font-size: 1rem;
+  color: white;
+  transition: 0.3s ease;
+ }
+ .footer ul li a:hover{
+  color: #aaa;
+ }
+ .footer p{
+  margin: 2rem 0;
+  text-align: center;
+  font-size: 1rem;
+  color: white;
+ }
+ .password-generator{
+  color: white;
+ }

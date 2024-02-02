@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="css/pass.css">
+    <link rel="icon" href="images/images-removebg-preview.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <div class="nav-bar">
+      <div class="logo">
+        <a href="#">
+            AUTO<span>VAULT</span>
+        </a>
+      </div>
+        <div class="nav-btn">
+            <div class="nav" id="#nav">
+                <ul>
+                  <li><a href="strength.html" target="_blank">Strength Checker</a></li>
+                  <li><a href="#section3">Auth</a></li>
+                  <li><a href="#section4">Setup</a></li>
+                  <li><a href="#faq">Faq</a></li>
+                  <li><div class="closeMenu"><i class="fa fa-times"></i></div></li>
+                </ul>
+            </div>
+            <div class="toggle-btn">
+              <div class="openMenu"><i class="fa fa-bars"></i></div>
+            </div>
+        </div>
+    </div>
+  </header>
+  <section class="section1">
+    <div class="container">
+        <h2 class="pass-gen">Password Generator</h2>
+     <p class="note"> <b>Need a strong password?</b> Try Password Generator to create complex passwords that will keep your information safe.</p>
+        <div class="input-box">
+          <input type="text" title="copy" disabled>
+          <span class="material-symbols-rounded">Copy</span>
+        </div>
+        <div class="pass-indicator"></div>
+        <div class="pass-length">
+          <div class="details">
+            <label class="title">Password Length</label>
+            <span></span>
+          </div>
+          <input title="password length" type="range" min="1" max="30" value="15" step="1">
+        </div>
+        <div class="pass-settings">
+          <label class="title">Password Settings</label>
+          <ul class="options">
+            <li class="option">
+              <input type="checkbox" id="lowercase" checked>
+              <label for="lowercase">Lowercase (a-z)</label>
+            </li>
+            <li class="option">
+              <input type="checkbox" id="uppercase">
+              <label for="uppercase">Uppercase (A-Z)</label>
+            </li>
+            <li class="option">
+              <input type="checkbox" id="numbers">
+              <label for="numbers">Numbers (0-9)</label>
+            </li>
+            <li class="option">
+              <input type="checkbox" id="symbols">
+              <label for="symbols">Symbols (!-$^+)</label>
+            </li>
+            <li class="option">
+              <input type="checkbox" id="exc-duplicate">
+              <label for="exc-duplicate">Exclude Duplicate</label>
+            </li>
+            <li class="option">
+              <input class="option-color" type="checkbox" id="spaces">
+              <label for="spaces">Include Spaces</label>
+            </li>
+          </ul>
+        </div>
+        <button class="generate-btn">Generate Password</button>
+        <div class="strength">Want to test the strength of another password? Try <i><a href="strength.html" target="_blank">Password Strength Testing Tool.</a></i></div>
+      </div>
+  </section>
+<br><br>
+  <section class="section3" id="section3">
+<div class="pos-cen">
+  <h5 class="head3">What is a password generator?</h5>
+
+    <p class="para3">A password generator is a tool or software designed to create unique and secure passwords for online accounts, applications, or systems. The primary purpose of a password generator is to enhance the security of digital accounts by generating passwords that are difficult for attackers to guess.</p> <br>
+    <ul class="list-para">
+      <li><b>Parameters:</b> Users can often customize the generated passwords based on certain parameters such as length, inclusion of specific character types, and avoidance of easily guessable patterns.</li> 
+      <li><b>Randomization:</b> The generator uses a randomization algorithm to create a password that meets the specified criteria. This randomness is crucial for security, as predictable passwords are more susceptible to hacking</li>
+      <li><b>Strength:</b> The resulting passwords are typically strong, meaning they have a high level of entropy or unpredictability. This makes them more resistant to brute-force attacks, where an attacker systematically tries all possible combinations.</li>
+      <li><b>Usage:</b> Users can then use the generated password for securing various online accounts, such as email, social media, banking, or any other service that requires a password.</li>
+    </ul>
+</div>
+  </section> <br><br>
+
+  <section class="section4" id="section4">
+    <div class="pos-cen">
+      <h5 class="head3">How can you protect your passwords?</h5>
+    
+        <p class="para3">Phishing, stolen credentials, and human error challenge your password security. Take action and improve your defense against them.</p> <br>
+        <ul class="list-para">
+          <li><b>Unique Passwords for Each Account:</b> Avoid using the same password across multiple accounts. If one account is compromised, having unique passwords helps prevent unauthorized access to other accounts.</li>
+          <li><b>Change Passwords Regularly:</b> Change passwords periodically, especially for critical accounts like email and online banking. This practice can add an extra layer of security.</li>
+          
+          <li><b>Enable Two-Factor Authentication (2FA):</b> Wherever possible, enable two-factor authentication. This adds an extra layer of security by requiring a second verification step, such as a code sent to your mobile device, in addition to your password.</li>
+          
+          <li><b>Update Software Regularly:</b> Keep your operating system, web browsers, and security software up to date. Software updates often include security patches that help protect against vulnerabilities.</li>
+        
+          <li><b>Educate Yourself:</b> Stay informed about the latest cybersecurity threats and best practices. Being aware of potential risks can help you make informed decisions about your online security.</li>
+        </ul>
+    </div>
+      </section>
+
+  <section class="section2" id="faq">
+    <h1 class="titles">Frequently asked questions</h1>
+
+    <div class="questions-container">
+        <div class="question">
+            <button>
+                <span>How does the password generator work?</span>
+                <i class="fas fa-chevron-down d-arrow"></i>
+            </button>
+            <p>The password generator creates random passwords based on parameters set by you. Parameters include password length, whether the password should be easy to say or read, and whether the password should have uppercase letters, lowercase letters, numbers, and symbols.</p>
+        </div>
+
+        <div class="question">
+          <button>
+              <span>What are the most common password mistakes?</span>
+              <i class="fas fa-chevron-down d-arrow"></i>
+          </button>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus corporis pariatur a maiores minus tempore magni nam beatae dolores omnis.</p>
+      </div>
+
+      <div class="question">
+        <button>
+            <span>Do I need a unique password for every account?</span>
+            <i class="fas fa-chevron-down d-arrow"></i>
+        </button>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus corporis pariatur a maiores minus tempore magni nam beatae dolores omnis.</p>
+    </div>
+
+        <div class="question">
+            <button>
+                <span>Can a strong password be hacked?</span>
+                <i class="fas fa-chevron-down d-arrow"></i>
+            </button>
+            <p>While a strong password can be technically hacked, it would take an imperceivable amount of time to do so. A recent report found that a 12-character password made only of numbers would take just 25 seconds to hack. Compare that to a 12-character password made up of numbers, uppercase and lowercase letters, and symbols, and the amount of time it would take to hack increases to 34,000 years. So a strong password won’t be hackable in your lifetime.</p>
+        </div>
+
+        <div class="question">
+            <button>
+                <span>How can I protect my passwords?</span>
+                <i class="fas fa-chevron-down d-arrow"></i>
+            </button>
+            <p>Create unique and complex passwords with a strong password generator for each online account.
+              <br>
+              Enable two-factor authentication whenever possible.
+            </p>
+        </div>
+
+        <div class="question">
+            <button>
+                <span>What makes a password safe?</span>
+                <i class="fas fa-chevron-down d-arrow"></i>
+            </button>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus corporis pariatur a maiores minus tempore magni nam beatae dolores omnis.</p>
+        </div>
+    </div>
+  </section>
+
+  <footer class="footer">  
+    <ul class="list">
+      <li>
+        <a href="#about">Password Strength Checker</a>
+      </li>
+      <li>
+        <a href="#about">Authentication</a>
+      </li>
+      <li>
+        <a href="#faq">FAQ</a>
+      </li>
+      <li>
+        <a href="#">Privacy policy</a>
+      </li>
+    </ul>
+    <p class="copyright">
+      &copy; Password Generator All Rights Reserved
+    </p>
+  </footer>
+    <script src="./script.js"></script>
+    <script src="./questions.js"></script>
+</body>
+</html>
