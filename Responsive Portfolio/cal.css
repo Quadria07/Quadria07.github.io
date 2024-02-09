@@ -1,0 +1,45 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(25, 25, 25);
+  color: white;
+}
+.cal-button{
+  background-color: black;
+  color: white;
+  font-size: 45px;
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  height: 65px;
+  width: 65px;
+  text-align: center;
+  border-radius: 100px;
+  cursor: pointer;
+}
+.sign-button{
+  background-color: rgb(37, 202, 37);
+  color: white;
+  font-size: 45px;
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  height: 65px;
+  width: 65px;
+  text-align: center;
+  border-radius: 100px;
+  cursor: pointer;
+}
+.clear-button{
+  background-color: white;
+  border: none;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-left: 100px;
+  background-color: rgb(37, 202, 37);
+  color: white;
+  cursor: pointer;
+  font-size: larger;
+  font-weight: bold;
+  border-radius: 150px;
+}

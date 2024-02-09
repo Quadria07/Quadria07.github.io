@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List Projects</title>
+  <link rel="stylesheet" href="../project/to-do-list.css">
+</head>
+<body>
+  <p class="header">Todo List</p>
+
+<div class="todo-input-grid">
+    <input placeholder="Todo  Name" class="js-name-input name-input">
+
+    <input type="date" class="js-due-date-input due-date-input">
+
+    <button 
+    class="add-todo-button js-add-todo-button">
+    Add</button>
+  <div class="js-todo-list todo-grid" ></div>
+</div>
+
+  <script>
+
+   const todoList = [{
+    name: 'Make Dinner',
+    duedate: '2022-12-22'
+   }, {
+    name: 'Wash Dishes',
+    duedate: '2022-12-22'
+  }];
+
+   
+   renderTodoList();
+        function renderTodoList() {
+      let todoListHTML = '';
+
+      todoList.forEach((todoObject, index)  => {
+        const {name, duedate} = todoObject;
+        const html =
+        `<div>${name}</div> 
+        <div>${duedate}</div>   
+          <button
+          " class="delete-todo-button js-delete-todo-button">Delete</button>
+          `
+        todoListHTML += html; 
+      });
+
+        document.querySelector('.js-todo-list')
+          .innerHTML = todoListHTML
+
+        document.querySelectorAll('.js-delete-todo-button')
+          .forEach((deleteButton, index) => {
+            deleteButton.addEventListener('click', () => {
+              todoList.splice(index, 1);
+            renderTodoList();
+            });
+          });
+  }  
+  
+  
+  document.querySelector('.js-add-todo-button')
+    .addEventListener('click', () => {
+      addTodo();
+    });
+//
+   function addTodo() {
+    const inputElement = document.querySelector('.js-name-input');
+   
+   const name = inputElement.value;
+
+   const dateInputElemt = document.querySelector('.js-due-date-input');
+   const duedate = dateInputElemt.value;
+
+   todoList.push({
+    //name: name,
+    //duedate: duedate
+    name,
+    duedate
+  });
+
+   inputElement.value = '';
+
+   renderTodoList();
+  } 
+  </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="rps.css">
+  <link rel="icon" href="image/autobyte logo.jpeg">
+</head>
+<body>
+  <p class="title">Rock Paper Scissors</p>
+
+  <button 
+    class= "move-button js-rock-button">
+    <img src="image/rock-emoji.png" alt="Rock" class="move-icon"> 
+  </button>
+
+  <button 
+    class= "move-button js-paper-button">
+    <img src="image/paper-emoji.png" alt="Paper" class="move-icon">
+  </button>
+
+  <button 
+    class= "move-button js-Scissors-button">
+    <img src="image/scissors-emoji.png" alt="  Scissors" class="move-icon">
+  </button>
+
+  
+  <p class="js-result result"></p>
+  <p class="js-moves"></p>
+  <p class="js-score score"></p>
+
+  <button 
+  onclick="score.Won = 0; score.Losses = 0; score.Ties = 0; localStorage.removeItem('score'); 
+  updatescoreElement()
+  " class="reset-score-button">RESET SCORE</button>
+
+  <button class="auto-play-button" onclick="
+    autoplay();
+  ">Auto Play</button>
+
+<script src="rps.js" ></script>
+</body>
+</html>

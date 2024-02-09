@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../project/calculator.css">
+  <title>calculator</title>
+</head>
+<body>
+  <h1>CALCULATOR</h1>
+  <p class="buttonElement"></p>
+  <p>
+    <button onclick="
+      updateCalculation ('1')
+      " class=" calculator-button cal-button">1</button>
+
+    <button onclick="
+      updateCalculation ('2')
+    " class=" calculator-button cal-button">2</button>
+
+    <button onclick="
+      updateCalculation ('3')
+    " class=" calculator-button cal-button">3</button>
+
+    <button onclick="
+      updateCalculation ('+')
+    " class="  calculator-button sign-button">+</button>
+  </p>
+<p>
+  <button onclick="
+  updateCalculation ('4')
+" class=" calculator-button cal-button">4</button>
+
+  <button onclick="
+  updateCalculation ('5')
+" class=" calculator-button cal-button">5</button>
+
+  <button onclick="
+  updateCalculation ('6')
+" class=" calculator-button cal-button">6</button>
+
+  <button onclick="
+    updateCalculation ('-')
+" class=" calculator-button sign-button">-</button>
+
+</p>
+<p>
+  <button onclick="
+  updateCalculation ('7')
+" class=" calculator-button cal-button">7</button>
+
+  <button onclick="
+  updateCalculation ('8')
+" class=" calculator-button cal-button">8</button>
+
+  <button onclick="
+  updateCalculation ('9')
+" class=" calculator-button cal-button">9</button>
+
+  <button onclick="
+  updateCalculation ('*')
+" class=" calculator-button sign-button">*</button>
+</p>
+
+<p>
+  <button onclick="
+  updateCalculation ('0')
+" class=" calculator-button cal-button">0</button>
+
+  <button onclick="
+  updateCalculation ('.')
+" class=" calculator-button sign-button">.</button>
+
+  <button onclick="
+  calculation = eval(calculation);
+  console.log(calculation);
+  showCal();
+  saveCalculation()
+" class="sign-button">=</button>
+
+  <button onclick="
+  updateCalculation ('/')
+" class=" calculator-button sign-button">/</button>
+</p>
+<p>
+  <button onclick="
+  calculation = '';
+  console.log('Cleared!')
+  saveCalculation()
+  showCal();
+" class=" calculator-button clear-button">Clear</button>
+</p>
+
+  <script>
+    let calculation = localStorage.getItem('calculation') || '';
+
+    function updateCalculation(value) {
+      calculation += value;
+      console.log(calculation);
+      showCal();
+    }
+    function saveCalculation() {
+      localStorage.setItem('calculation', calculation);
+    }
+
+    function showCal() {
+      document.querySelector('.buttonElement')
+        .innerHTML = `${calculation}`
+    }
+
+  </script>
+</body>
+</html>
